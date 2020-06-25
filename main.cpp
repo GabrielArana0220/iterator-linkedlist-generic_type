@@ -44,4 +44,87 @@ int main()
     {
         std::cout << *it << " ";
     }
+    LinkedList<char> *listac = new LinkedList<char>;
+    char auc;
+    au2 = 0;
+    c = false;
+    std::cout << "bienvenido a linked list, aqui podras guardar y sacar tus caracteres, y lo mejor es que estaran ordenados para una busqueda mas comoda!!!\n";
+    while(!c)
+    {
+        std::cout << "elige que quiere hacer: \n\n (0) salir\n (1)insertar caracter\n (2)sacar caracter\n";
+        std::cin >> au2;
+        switch(au2)
+        {
+        case 0:{
+            std::cout << "gracias por el servicio";
+            c = true;
+            break;}
+        case 1:{
+            std::cout << "elige el caracter: ";
+            std::cin >> auc;
+            listac->add(auc);
+            break;}
+        case 2:{
+            std::cout << "que caracter\n";
+            std::cin >> auc;
+            listac->del(auc);
+            break;}
+        }
+        std::cout << " esta es su lista\n\n";
+        listac->show();
+
+    }
+    LinkedList<char> *lista2c = new LinkedList<char>(*listac);
+    lista2c->show();
+    lista2c->del('s');
+    listac->show();
+    lista2c->show();
+    for ( LinkedList<char>::iterato it = listac->begin();
+            it != listac->end(); it++)
+    {
+        std::cout << *it << " ";
+    }
+
+    LinkedList<Point> *listap = new LinkedList<Point>;
+    Point aup;
+    au2 = 0;
+    c = false;
+    std::cout << "bienvenido a linked list, aqui podras guardar y sacar tus Puntos, y lo mejor es que estaran ordenados para una busqueda mas comoda!!!\n";
+    while(!c)
+    {
+        std::cout << "elige que quiere hacer: \n\n (0) salir\n (1)insertar Punto\n (2)sacar Punto\n";
+        std::cin >> au2;
+        switch(au2)
+        {
+        case 0:{
+            std::cout << "gracias por el servicio";
+            c = true;
+            break;}
+        case 1:{
+            std::cout << "elige el Punto: ";
+            std::cin >> aup;
+            listap->add(aup);
+            break;}
+        case 2:{
+            std::cout << "que Punto\n";
+            std::cin >> aup;
+            listap->del(aup);
+            break;}
+        }
+        std::cout << " esta es su lista\n\n";
+        listap->show();
+
+    }
+    LinkedList<Point> *lista2p = new LinkedList<Point>(*listap);
+    lista2p->show();
+    listap->show();
+    lista2p->show();
+    for ( LinkedList<Point>::iterato it = listap->begin();
+            it != listap->end(); it++)
+    {
+        std::cout << *it << " ";
+    }
+
+
 }
+}}
