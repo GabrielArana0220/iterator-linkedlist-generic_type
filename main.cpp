@@ -1,5 +1,5 @@
 #include "linkedlist.cpp"
-
+#include "point.h"
 
 
 int main()
@@ -127,4 +127,4 @@ int main()
 
 
 }
-}}
+
